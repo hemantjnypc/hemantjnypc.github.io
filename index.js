@@ -90,7 +90,7 @@ var app = new Vue({
           "w": 4,
           "h": 6,
           "i": "9",
-          "content": "images"
+          "content": "image slider"
         }        
         ],
     }},
