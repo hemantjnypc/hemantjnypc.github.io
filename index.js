@@ -1,3 +1,6 @@
+//js//
+
+  
 var GridLayout = VueGridLayout.GridLayout;
 var GridItem = VueGridLayout.GridItem;
 var app = new Vue({
