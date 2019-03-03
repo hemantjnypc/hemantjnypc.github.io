@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>vue-grid-layout</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/D5393630-4AC4-EE40-B2D4-A38CA83B3ECC/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/51DAB283-0069-5440-8D5A-AA22176E8D7B/abn/main.css"/><script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+      <script type="text/javascript" src="https://inspired-aria-158313.appspot.com/vue-grid-layout.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+
+  <style id="compiled-css" type="text/css">
+      /*** EXAMPLE ***/
+
+.vue-grid-layout {
+  background: #fff;
+}
+
+.vue-grid-item:not(.vue-grid-placeholder) {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.vue-grid-item.resizing {
+  opacity: 0.9;
+}
+
+.vue-grid-item.static {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.label {
+  width: 100%;
+  font-family: 'Roboto:400', sans-serif;
+  font-style: italic;
+  font-weight:bold;
+  font-size: 15px;
+  padding: 15px 0 0 0;
+  text-align: center;
+  position:relative;
+  
+}
+
+.vue-grid-item .flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ffffff;
+  font-size: 24px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.vue-grid-item .no-drag {
+  height: 100%;
+  width: 100%;
+}
+
+.vue-grid-item .minMax {
+  font-size: 12px;
+}
+
+.vue-grid-item .add {
+  cursor: pointer;
+}
+
+.vue-resizable-handle {
+  z-index: 5000;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg08IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNiwgRXhwb3J0IFNWRyBFeHRlbnNpb24gYnkgQWFyb24gQmVhbGwgKGh0dHA6Ly9maXJld29ya3MuYWJlYWxsLmNvbSkgLiBWZXJzaW9uOiAwLjYuMSAgLS0+DTwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DTxzdmcgaWQ9IlVudGl0bGVkLVBhZ2UlMjAxIiB2aWV3Qm94PSIwIDAgNiA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSINCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiDQl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjZweCIgaGVpZ2h0PSI2cHgiDT4NCTxnIG9wYWNpdHk9IjAuMzAyIj4NCQk8cGF0aCBkPSJNIDYgNiBMIDAgNiBMIDAgNC4yIEwgNCA0LjIgTCA0LjIgNC4yIEwgNC4yIDAgTCA2IDAgTCA2IDYgTCA2IDYgWiIgZmlsbD0iIzAwMDAwMCIvPg0JPC9nPg08L3N2Zz4=');
+  background-position: bottom right;
+  padding: 0 3px 3px 0;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-sizing: border-box;
+  cursor: se-resize;
+}
+
+.vue-draggable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle cx='5' cy='5' r='5' fill='#999999'/></svg>") no-repeat;
+  background-position: bottom right;
+  padding: 0 8px 8px 0;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.8s ease;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px
+  }
+}
+
+.fix_wid {
+  width: 90%;
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    window.onload=function(){
+      
+var GridLayout = VueGridLayout.GridLayout;
+var GridItem = VueGridLayout.GridItem;
+var app = new Vue({
+  el: '#pt',
+  components: {
+    GridLayout,
+    GridItem,
+  },
+  data: function() {
+    return {
+      layout: [
+      {
+          "x": 0,
+          "y": 6,
+          "w": 2,
+          "h": 2,
+          "i": "1",
+          "label":"",
+          "content": "<b>DESIGN THINKING - AN IMPERATIVE</b>"
+        },
+         {
+          "x": 4,
+          "y": 22,
+          "w": 3,
+          "h": 5,
+          "i": "2",
+          "label":"",
+          "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/ZJ6yKEK.png'  />"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "w": 4,
+          "h": 6,
+          "i": "3",
+          "label":"Real-time Inputs",
+          "content": "<iframe width='450' height='260' style='border: 1px solid #cccccc;' src='https://thingspeak.com/channels/692115/charts/1?bgcolor=%23d9ff46&color=%23112b00&days=1&dynamic=true&results=10&type=line'></iframe>"
+        },
+      {
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 6,
+          "i": "4",
+          "label":"Why Design Thinking",
+          "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/rmhvzo8.png'  />"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "w": 2,
+          "h": 8,
+          "i": "5",
+          "label":"Human Centered",
+          "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/cdVmgrJ.png'  />"
+        },
+        {
+          "x": 4,
+          "y": 12,
+          "w": 4,
+          "h": 10,
+          "i": "6",
+          "label":"Steps",
+          "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/L7jRRzs.png'  />"
+          },
+        {
+          "x": 0,
+          "y": 20,
+          "w": 4,
+          "h": 7,
+          "i": "7",
+          "label":"DT in STEM",
+          "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/FTKNHLX.png'  />"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "w": 4,
+          "h": 6,
+          "i": "8",
+          "label":"A Well-Known Product",
+          "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/8nMAfy3.png'  />"
+        },
+        {
+          "x": 0,
+          "y": 14,
+          "w": 4,
+          "h": 6,
+          "i": "9",
+          "label":"Process",
+          "content": "<iframe style='width:80%;height:80%;object-fit:cover;' src='https://www.youtube.com/embed/_r0VX-aU_T8'></iframe>"
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "w": 4,
+          "h": 6,
+          "i": "10",
+          "label":"",
+          "content": "..Image Slider.."
+        }        
+        ],
+    }},
+  
+});
+
+
+    }
+
+</script>
+
+</head>
+<body>
+    <head>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+  <title>Corporate Presentation Tool</title>
+</head>
+
+<body>
+
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+  <div id="pt" style="width:95%">
+
+    <grid-layout :layout="layout" 
+    :col-num="8" 
+    :row-height="50" 
+    :is-draggable="true" 
+    :is-resizable="true" 
+    :vertical-compact="false" 
+    :margin="[10, 10]" 
+    :use-css-transforms="true">
+      
+      <grid-item v-for="item in layout" 
+:x="item.x" 
+:y="item.y" 
+:w="item.w" 
+:h="item.h" 
+:i="item.i" 
+:content="item.content"
+:label="item.label" 
+class="label">
+<span>{{item.label}}</span>
+        
+ <div class="flex-container" v-html="item.content">
+ </div>    
+        
+      
+      </grid-item>
+    </grid-layout>
+  </div>
+</body>
+
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "u756mbq0"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+</body>
+</html>
