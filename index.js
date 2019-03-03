@@ -80,7 +80,7 @@ var app = new Vue({
           "w": 4,
           "h": 6,
           "i": "8",
-          "label":"A Well-Known Outcome",
+          "label":"A Well-Known Product",
           "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/8nMAfy3.png'  />"
         },
         {
