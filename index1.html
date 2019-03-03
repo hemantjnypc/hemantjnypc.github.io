@@ -3,14 +3,14 @@
 <head>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
-  <link href="app.css" rel="stylesheet">
+  <title>Corporate Presentation Tool</title>
 </head>
 
 <body>
 
   <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 
-  <div id="pt" class="main">
+  <div id="pt" style="width:95%">
 
     <grid-layout :layout="layout" 
     :col-num="8" 
@@ -21,12 +21,16 @@
     :margin="[10, 10]" 
     :use-css-transforms="true">
       
-      <grid-item v-for="item in layout" :x="item.x" 
+      <grid-item v-for="item in layout" 
+:x="item.x" 
 :y="item.y" 
 :w="item.w" 
 :h="item.h" 
 :i="item.i" 
-:content="item.content">
+:content="item.content"
+:label="item.label" 
+class="label">
+<span>{{item.label}}</span>
         
  <div class="flex-container" v-html="item.content">
  </div>    
