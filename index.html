@@ -3,14 +3,20 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Corporate Presentation Tool</title>
+  <title>vue-grid-layout</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/D5393630-4AC4-EE40-B2D4-A38CA83B3ECC/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/51DAB283-0069-5440-8D5A-AA22176E8D7B/abn/main.css"/><script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
 
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
       <script type="text/javascript" src="https://inspired-aria-158313.appspot.com/vue-grid-layout.js"></script>
@@ -19,32 +25,8 @@
   <style id="compiled-css" type="text/css">
       /*** EXAMPLE ***/
 
-.main {
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  text-align: center;
-  margin: auto;
-}
-
 .vue-grid-layout {
   background: #fff;
-}
-
-.vue-resizable-handle {
-  z-index: 5000;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  bottom: 0;
-  right: 0;
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg08IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNiwgRXhwb3J0IFNWRyBFeHRlbnNpb24gYnkgQWFyb24gQmVhbGwgKGh0dHA6Ly9maXJld29ya3MuYWJlYWxsLmNvbSkgLiBWZXJzaW9uOiAwLjYuMSAgLS0+DTwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DTxzdmcgaWQ9IlVudGl0bGVkLVBhZ2UlMjAxIiB2aWV3Qm94PSIwIDAgNiA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSINCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiDQl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjZweCIgaGVpZ2h0PSI2cHgiDT4NCTxnIG9wYWNpdHk9IjAuMzAyIj4NCQk8cGF0aCBkPSJNIDYgNiBMIDAgNiBMIDAgNC4yIEwgNCA0LjIgTCA0LjIgNC4yIEwgNC4yIDAgTCA2IDAgTCA2IDYgTCA2IDYgWiIgZmlsbD0iIzAwMDAwMCIvPg0JPC9nPg08L3N2Zz4=');
-  background-position: bottom right;
-  padding: 0 3px 3px 0;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  box-sizing: border-box;
-  cursor: se-resize;
 }
 
 .vue-grid-item:not(.vue-grid-placeholder) {
@@ -63,6 +45,18 @@
   border-radius: 10px;
   border: 1px solid #eeeeee;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.label {
+  width: 100%;
+  font-family: 'Roboto:400', sans-serif;
+  font-style: italic;
+  font-weight:bold;
+  font-size: 15px;
+  padding: 10px 0 0 0;
+  text-align: center;
+  position:relative;
+  
 }
 
 .vue-grid-item .flex-container {
@@ -87,6 +81,22 @@
 
 .vue-grid-item .add {
   cursor: pointer;
+}
+
+.vue-resizable-handle {
+  z-index: 5000;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg08IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNiwgRXhwb3J0IFNWRyBFeHRlbnNpb24gYnkgQWFyb24gQmVhbGwgKGh0dHA6Ly9maXJld29ya3MuYWJlYWxsLmNvbSkgLiBWZXJzaW9uOiAwLjYuMSAgLS0+DTwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DTxzdmcgaWQ9IlVudGl0bGVkLVBhZ2UlMjAxIiB2aWV3Qm94PSIwIDAgNiA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSINCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiDQl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjZweCIgaGVpZ2h0PSI2cHgiDT4NCTxnIG9wYWNpdHk9IjAuMzAyIj4NCQk8cGF0aCBkPSJNIDYgNiBMIDAgNiBMIDAgNC4yIEwgNCA0LjIgTCA0LjIgNC4yIEwgNC4yIDAgTCA2IDAgTCA2IDYgTCA2IDYgWiIgZmlsbD0iIzAwMDAwMCIvPg0JPC9nPg08L3N2Zz4=');
+  background-position: bottom right;
+  padding: 0 3px 3px 0;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-sizing: border-box;
+  cursor: se-resize;
 }
 
 .vue-draggable-handle {
@@ -182,7 +192,9 @@ img {
   </style>
 
 
- <script type="text/javascript">
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
 
 
     window.onload=function(){
@@ -200,83 +212,93 @@ var app = new Vue({
       layout: [
       {
           "x": 0,
-          "y": 3,
-          "w": 5,
-          "h": 3,
-          "i": "0",
+          "y": 6,
+          "w": 2,
+          "h": 2,
+          "i": "1",
+          "label":"",
           "content": "<b>DESIGN THINKING - AN IMPERATIVE</b>"
         },
          {
-          "x": 5,
-          "y": 6,
+          "x": 4,
+          "y": 22,
           "w": 3,
-          "h": 7,
-          "i": "1",
+          "h": 5,
+          "i": "2",
+          "label":"",
           "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/ZJ6yKEK.png'  />"
         },
         {
-          "x": 5,
+          "x": 4,
           "y": 0,
-          "w": 3,
+          "w": 4,
           "h": 6,
-          "i": "2",
+          "i": "3",
+          "label":"Real-time Inputs",
           "content": "<iframe width='450' height='260' style='border: 1px solid #cccccc;' src='https://thingspeak.com/channels/692115/charts/1?bgcolor=%23d9ff46&color=%23112b00&days=1&dynamic=true&results=10&type=line'></iframe>"
         },
       {
           "x": 0,
           "y": 0,
-          "w": 3,
-          "h": 3,
-          "i": "3",
+          "w": 2,
+          "h": 6,
+          "i": "4",
+          "label":"Why Design Thinking",
           "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/rmhvzo8.png'  />"
         },
         {
-          "x": 3,
+          "x": 2,
           "y": 0,
           "w": 2,
-          "h": 3,
-          "i": "4",
+          "h": 8,
+          "i": "5",
+          "label":"Human Centered",
           "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/cdVmgrJ.png'  />"
         },
         {
-          "x": 0,
-          "y": 6,
-          "w": 3,
-          "h": 7,
-          "i": "5",
+          "x": 4,
+          "y": 12,
+          "w": 4,
+          "h": 10,
+          "i": "6",
+          "label":"Steps",
           "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/L7jRRzs.png'  />"
           },
         {
-          "x": 3,
-          "y": 10,
-          "w": 2,
-          "h": 3,
-          "i": "6",
-          "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/W6uNymb.png'  />"
+          "x": 0,
+          "y": 20,
+          "w": 4,
+          "h": 7,
+          "i": "7",
+          "label":"DT in STEM",
+          "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/FTKNHLX.png'  />"
         },
         {
-          "x": 3,
+          "x": 4,
           "y": 6,
-          "w": 2,
-          "h": 4,
-          "i": "7",
+          "w": 4,
+          "h": 6,
+          "i": "8",
+          "label":"A Well-Known Example",
           "content": "<img style='width:80%;height:80%;object-fit:cover;' src='https://i.imgur.com/8nMAfy3.png'  />"
         },
         {
           "x": 0,
-          "y": 13,
-          "w": 4,
-          "h": 6,
-          "i": "8",
-          "content": "<iframe style='width:80%;height:80%;object-fit:cover;' src='https://www.youtube.com/embed/_r0VX-aU_T8'></iframe>"
-        },
-        {
-          "x": 4,
-          "y": 13,
+          "y": 14,
           "w": 4,
           "h": 6,
           "i": "9",
-          "content": "image slider"
+          "label":"Process",
+          "content": "<iframe style='width:80%;height:80%;object-fit:cover;' src='https://www.youtube.com/embed/_r0VX-aU_T8'></iframe>"
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "w": 4,
+          "h": 6,
+          "i": "10",
+          "label":"",
+          "content": "..Image Slider.."
         }        
         ],
     }},
@@ -293,13 +315,14 @@ var app = new Vue({
     <head>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+  <title>Corporate Presentation Tool</title>
 </head>
 
 <body>
 
   <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 
-  <div id="pt" class="main">
+  <div id="pt" style="width:95%">
 
     <grid-layout :layout="layout" 
     :col-num="8" 
@@ -310,12 +333,16 @@ var app = new Vue({
     :margin="[10, 10]" 
     :use-css-transforms="true">
       
-      <grid-item v-for="item in layout" :x="item.x" 
+      <grid-item v-for="item in layout" 
+:x="item.x" 
 :y="item.y" 
 :w="item.w" 
 :h="item.h" 
 :i="item.i" 
-:content="item.content">
+:content="item.content"
+:label="item.label" 
+class="label">
+<span>{{item.label}}</span>
         
  <div class="flex-container" v-html="item.content">
  </div>    
